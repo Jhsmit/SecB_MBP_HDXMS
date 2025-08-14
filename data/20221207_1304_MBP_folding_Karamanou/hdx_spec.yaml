@@ -1,0 +1,261 @@
+data_files:
+  MBP_p101:
+    filename: data/MBPsmFRET_wt_Febr2021.csv
+    format: DynamX
+  MBP_p101_2022:
+    filename: data/MBPp101_20Cfold_3Dec2022.csv
+    format: DynamX
+  MBP_p101_SecB:
+    filename: data/MBPp101plusSecB_20Cfold_3Dec2022.csv
+    format: DynamX
+  MBP_Y283D:
+    filename: data/MBPsmFRET_Y283D_Feb2021.csv
+    format: DynamX
+  MBP_Y283D_SecB:
+    filename: data/smFRETY283D_SecB_May2021.csv
+    format: DynamX
+
+metadata:  # global metadata equal for all protein states
+  pH: 7.59
+  d_percentage: 90.0
+  protein:
+    uniprot: P0AEX9
+    model: # Optional protein model information
+      database: pdb
+      entry: [1ANF, 1DMB]
+
+states:
+  MBP_wt_p101:  # Short human-readable identifier for this protein HDX state
+    peptides:  # Dictionary of peptides defined for this HDX state (typically experiment, FD_control, ND_control)
+      experiment:
+        data_file: MBP_p101
+        state: MBPp101_20C_folding_kinetix  # which protein state to select from data file table
+        exposure: # Exposure value(s) to select from data file table
+          values:
+           - 0.083
+           - 0.167
+           - 0.333
+           - 0.666
+           - 1.0
+           - 2.5
+           - 5.0
+           - 10.0
+           - 15.000001
+           - 20.0
+           - 30.000002
+           - 45.000004
+           - 60.000004
+           - 180.000015
+           - 1200.0
+          unit: min
+      FD_control:
+        data_file: MBP_p101
+        state: NATIVE_MBPp101
+        exposure:
+          value: 1200.
+          unit: min
+        description: D-pulse labelling of Native MBP # Optional additional experimental details per peptide set.
+      ND_control:
+        data_file: MBP_p101
+        state: FD_MBPp101
+        exposure:
+          value: 0.001
+          unit: min
+        description: D pulse of unfolded MBP
+
+    metadata:
+      temperature:  # Temperature of the exchange buffer and unit
+        value: 20.
+        unit: Celsius
+      sequence: MKIEEGKLVIWINGDKGYNGLAEVGKKFEKDTGIKVCVEHPDKLEEKFPQVAATGDGPDIIFWAHDRFGGYAQSGLLAEITPDKAFQDKLYPFTWDAVRYNGKLIAYPIAVEALSLIYNKDLLPNPPKTWEEIPALDKELKAKGKSALMFNLQEPYFTWPLIAADGGYAFKYENGKYDIKDVGVDNAGAKAGLTFLVDLIKNKHMNADTDYSIAEAAFNKGETAMTINGPWAWSNIDTSKVNYGVTVLPTFKGQPSKPFVGVLSAGINAASPNKELAKEFLENYLLTDEGLEAVNKDKPLGAVALKSYEEELAKDPRIAATMENAQKGEIMPNIPQMSAFWYAVRTAVINAACGRQTVDEALKDAQTRITKKLAAALEHHHHHH
+      n_term: 1  # Residue number of the N terminal residue (can be negative)
+      c_term: 384 # Residue number of the C terminal residue
+      concentration: NaN # Concentration of the protein during H/D labelling, in M
+      oligomeric_state: 1 # Oligomeric state of the protein during H/D labelling
+
+  MBP_wt_p101_2022:  # Short human-readable identifier for this protein HDX state
+    peptides:  # Dictionary of peptides defined for this HDX state (typically experiment, FD_control, ND_control)
+      experiment:
+        data_file: MBP_p101_2022
+        state: MBPp101_20C_folding_kinetix  # which protein state to select from data file table
+        exposure: # Exposure value(s) to select from data file table
+          values:
+           - 0.083
+           - 0.167
+           - 0.333
+           - 0.666
+           - 1.0
+           - 2.5
+           - 5.0
+           - 10.0
+           - 15.000001
+           - 20.0
+           - 30.000002
+           - 45.000004
+           - 60.000004
+           - 180.000015
+           - 1200.0
+          unit: min
+      FD_control:
+        data_file: MBP_p101
+        state: NATIVE_MBPp101
+        exposure:
+          value: 1200.
+          unit: min
+        description: D-pulse labelling of Native MBP # Optional additional experimental details per peptide set.
+      ND_control:
+        data_file: MBP_p101
+        state: FD_MBPp101
+        exposure:
+          value: 0.001
+          unit: min
+        description: D pulse of unfolded MBP
+
+    metadata:
+      temperature:  # Temperature of the exchange buffer and unit
+        value: 20.
+        unit: Celsius
+      sequence: MKIEEGKLVIWINGDKGYNGLAEVGKKFEKDTGIKVCVEHPDKLEEKFPQVAATGDGPDIIFWAHDRFGGYAQSGLLAEITPDKAFQDKLYPFTWDAVRYNGKLIAYPIAVEALSLIYNKDLLPNPPKTWEEIPALDKELKAKGKSALMFNLQEPYFTWPLIAADGGYAFKYENGKYDIKDVGVDNAGAKAGLTFLVDLIKNKHMNADTDYSIAEAAFNKGETAMTINGPWAWSNIDTSKVNYGVTVLPTFKGQPSKPFVGVLSAGINAASPNKELAKEFLENYLLTDEGLEAVNKDKPLGAVALKSYEEELAKDPRIAATMENAQKGEIMPNIPQMSAFWYAVRTAVINAACGRQTVDEALKDAQTRITKKLAAALEHHHHHH
+      n_term: 1  # Residue number of the N terminal residue (can be negative)
+      c_term: 384 # Residue number of the C terminal residue
+      concentration: NaN # Concentration of the protein during H/D labelling, in M
+      oligomeric_state: 1 # Oligomeric state of the protein during H/D labelling
+
+  MBP_wt_p101_SecB:  # Short human-readable identifier for this protein HDX state
+    peptides:  # Dictionary of peptides defined for this HDX state (typically experiment, FD_control, ND_control)
+      experiment:
+        data_file: MBP_p101_SecB
+        state: mbp p101 plus SecB 20C folding  # which protein state to select from data file table
+        exposure: # Exposure value(s) to select from data file table
+          values:
+           - 0.083
+           - 0.167
+           - 0.333
+           - 0.666
+           - 1.0
+           - 2.5
+           - 5.0
+           - 10.0
+           - 15.000001
+           - 20.0
+           - 30.000002
+           - 60.000004
+           - 180.000015
+           - 1200.0
+          unit: min
+      FD_control:
+        data_file: MBP_p101_SecB
+        state: NATIVE_MBPp101
+        exposure:
+          value: 1200.
+          unit: min
+        description: D-pulse labelling of Native MBP # Optional additional experimental details per peptide set.
+      ND_control:
+        data_file: MBP_p101_SecB
+        state: FD_MBPp101
+        exposure:
+          value: 0.001
+          unit: min
+        description: D pulse of unfolded MBP
+
+    metadata:
+      temperature:  # Temperature of the exchange buffer and unit
+        value: 20.
+        unit: Celsius
+      sequence: MKIEEGKLVIWINGDKGYNGLAEVGKKFEKDTGIKVCVEHPDKLEEKFPQVAATGDGPDIIFWAHDRFGGYAQSGLLAEITPDKAFQDKLYPFTWDAVRYNGKLIAYPIAVEALSLIYNKDLLPNPPKTWEEIPALDKELKAKGKSALMFNLQEPYFTWPLIAADGGYAFKYENGKYDIKDVGVDNAGAKAGLTFLVDLIKNKHMNADTDYSIAEAAFNKGETAMTINGPWAWSNIDTSKVNYGVTVLPTFKGQPSKPFVGVLSAGINAASPNKELAKEFLENYLLTDEGLEAVNKDKPLGAVALKSYEEELAKDPRIAATMENAQKGEIMPNIPQMSAFWYAVRTAVINAACGRQTVDEALKDAQTRITKKLAAALEHHHHHH
+      n_term: 1  # Residue number of the N terminal residue (can be negative)
+      c_term: 384 # Residue number of the C terminal residue
+      concentration: NaN # Concentration of the protein during H/D labelling, in M
+      oligomeric_state: 1 # Oligomeric state of the protein during H/D labelling
+
+  MBP_Y283D:  # Short human-readable identifier for this protein HDX state
+    peptides:  # Dictionary of peptides defined for this HDX state (typically experiment, FD_control, ND_control)
+      experiment:
+        data_file: MBP_Y283D
+        state: Y283D_20Cfolding  # which protein state to select from data file table
+        exposure: # Exposure value(s) to select from data file table
+          values:
+           - 0.083
+           - 0.167
+           - 0.333
+           - 0.666
+           - 1.0
+           - 2.5
+           - 5.0
+           - 10.0
+           - 15.000001
+           - 20.0
+           - 30.000002
+           - 45.000004
+           - 60.000004
+           - 180.000015
+           - 1440.000122
+          unit: min
+      FD_control:
+        data_file: MBP_Y283D
+        state: Native
+        exposure:
+          value: 1440.000122
+          unit: min
+        description: D-pulse labelling of Native MBP Y283D
+      ND_control:
+        data_file: MBP_Y283D
+        state: FD
+        exposure:
+          value: 0.001
+          unit: min
+        description: D pulse of unfolded MBP Y283D
+
+    metadata:
+      temperature:  # Temperature of the exchange buffer and unit
+        value: 20.
+        unit: Celsius
+      sequence: MKIEEGKLVIWINGDKGYNGLAEVGKKFEKDTGIKVCVEHPDKLEEKFPQVAATGDGPDIIFWAHDRFGGYAQSGLLAEITPDKAFQDKLYPFTWDAVRYNGKLIAYPIAVEALSLIYNKDLLPNPPKTWEEIPALDKELKAKGKSALMFNLQEPYFTWPLIAADGGYAFKYENGKYDIKDVGVDNAGAKAGLTFLVDLIKNKHMNADTDYSIAEAAFNKGETAMTINGPWAWSNIDTSKVNYGVTVLPTFKGQPSKPFVGVLSAGINAASPNKELAKEFLENDLLTDEGLEAVNKDKPLGAVALKSYEEELAKDPRIAATMENAQKGEIMPNIPQMSAFWYAVRTAVINAACGRQTVDEALKDAQTRITKKLAAALEHHHHHH
+      n_term: 1  # Residue number of the N terminal residue (can be negative)
+      c_term: 384 # Residue number of the C terminal residue
+      concentration: NaN # Concentration of the protein during H/D labelling, in M
+      oligomeric_state: 1 # Oligomeric state of the protein during H/D labelling
+
+  MBP_Y283D_SecB:  # Short human-readable identifier for this protein HDX state
+    peptides:  # Dictionary of peptides defined for this HDX state (typically experiment, FD_control, ND_control)
+      experiment:
+        data_file: MBP_Y283D_SecB
+        state: Y283DMBP+SecB +20C folding kinetics  # which protein state to select from data file table
+        exposure: # Exposure value(s) to select from data file table
+          values:
+           - 0.167
+           - 1.0
+           - 10.0
+           - 30.000002
+           - 60.000004
+           - 180.000015
+           - 1440.000122
+          unit: min
+      FD_control:
+        data_file: MBP_Y283D_SecB
+        state: Native
+        exposure:
+          value: 1440.000122
+          unit: min
+        description: D-pulse labelling of Native MBP Y283D + SecB
+      ND_control:
+        data_file: MBP_Y283D_SecB
+        state: FD
+        exposure:
+          value: 0.001
+          unit: min
+        description: D pulse of unfolded MBP Y283D + SecB
+
+    metadata:
+      temperature:  # Temperature of the exchange buffer and unit
+        value: 20.
+        unit: Celsius
+      sequence: MKIEEGKLVIWINGDKGYNGLAEVGKKFEKDTGIKVCVEHPDKLEEKFPQVAATGDGPDIIFWAHDRFGGYAQSGLLAEITPDKAFQDKLYPFTWDAVRYNGKLIAYPIAVEALSLIYNKDLLPNPPKTWEEIPALDKELKAKGKSALMFNLQEPYFTWPLIAADGGYAFKYENGKYDIKDVGVDNAGAKAGLTFLVDLIKNKHMNADTDYSIAEAAFNKGETAMTINGPWAWSNIDTSKVNYGVTVLPTFKGQPSKPFVGVLSAGINAASPNKELAKEFLENDLLTDEGLEAVNKDKPLGAVALKSYEEELAKDPRIAATMENAQKGEIMPNIPQMSAFWYAVRTAVINAACGRQTVDEALKDAQTRITKKLAAALEHHHHHH
+      n_term: 1  # Residue number of the N terminal residue (can be negative)
+      c_term: 384 # Residue number of the C terminal residue
+      concentration: NaN # Concentration of the protein during H/D labelling, in M
+      oligomeric_state: 1 # Oligomeric state of the protein during H/D labelling
+      protein_complex:  # Description of the protein complex this protein is in with
+        - name: SecB # human readable name
+          UniProt: B1X943
+          stoichiometry: 4 # Number of this protein per POI

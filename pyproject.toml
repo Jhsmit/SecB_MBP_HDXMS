@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+license = 'MIT'
+
+name = "secb_mbp_hdxms"
+version = "0.1.0"
+description = "Analysis of MBP folding HDX-MS data with the SecB chaperone"
+authors = [{ name = "Jochem H. Smit", email = "jochem.smit@kuleuven.be" }]
+dependencies = [
+    "watermark",
+    "ipykernel",
+    "dacite",
+    "pyyaml",
+    "numpy",
+    "ipymolstar",
+    "cmap",
+]
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["hal", 'ava']

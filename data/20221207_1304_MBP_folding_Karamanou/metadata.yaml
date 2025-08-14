@@ -1,0 +1,25 @@
+data:
+  protein:
+    uniprot: P0AEX9
+  identifier: null
+  description: Pulsed labelling HDX-MS of MBP and folding mutants folding reaction.
+
+#citation.cff author format?
+authors:
+  - name: Lily Karamanou
+    email: null
+    ORCID: 0000-0002-8803-1404
+    affiliation: KU Leuven
+
+# List of publications where the datasets are published
+publications:
+  - title: null
+    DOI: null
+    URL: null
+
+# Repositories where the data is also published or where the raw data is deposited
+repositories:
+  - repository: Zenodo
+    DOI: null
+    ULR: null
+    comments: Raw data

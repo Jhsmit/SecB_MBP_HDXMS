@@ -1,0 +1,111 @@
+data_files:
+  MBPsmFRET_Y283D:
+    filename: data\MBPsmFRET_Y283D_modOct24.csv
+    format: DynamX
+
+metadata:  # global metadata equal for all protein states
+  pH: 7.59
+  d_percentage: 90.0
+  protein:
+    uniprot: P0AEX9
+    model: # Optional protein model information
+      database: pdb
+      entry: [1ANF, 1DMB]
+
+states:
+  folding:  # Short human-readable identifier for this protein HDX state
+    peptides:  # Dictionary of peptides defined for this HDX state (typically experiment, FD_control, ND_control)
+      experiment:
+        data_file: MBPsmFRET_Y283D  # Reference to data files defined above
+        state: 15 min  # which protein state to select from data file table
+        exposure: # Exposure value(s) to select from data file table
+          values:
+            - 15.000001
+          unit: min
+      FD_control:
+        data_file: MBPsmFRET_Y283D
+        state: Native
+        exposure:
+          value: 45.000004
+          unit: min
+      ND_control:
+        data_file: MBPsmFRET_Y283D
+        state: FD
+        exposure:
+          value: 5.0000
+          unit: min
+    metadata:
+      temperature:  # Temperature of the exchange buffer and unit
+        value: 20.
+        unit: Celsius
+      sequence: MKIEEGKLVIWINGDKGYNGLAEVGKKFEKDTGIKVCVEHPDKLEEKFPQVAATGDGPDIIFWAHDRFGGYAQSGLLAEITPDKAFQDKLYPFTWDAVRYNGKLIAYPIAVEALSLIYNKDLLPNPPKTWEEIPALDKELKAKGKSALMFNLQEPYFTWPLIAADGGYAFKYENGKYDIKDVGVDNAGAKAGLTFLVDLIKNKHMNADTDYSIAEAAFNKGETAMTINGPWAWSNIDTSKVNYGVTVLPTFKGQPSKPFVGVLSAGINAASPNKELAKEFLENDLLTDEGLEAVNKDKPLGAVALKSYEEELAKDPRIAATMENAQKGEIMPNIPQMSAFWYAVRTAVINAACGRQTVDEALKDAQTRITKKLAAALEHHHHHH
+      n_term: 1  # Residue number of the N terminal residue (can be negative)
+      c_term: 384 # Residue number of the C terminal residue
+      concentration: NaN # Concentration of the protein during H/D labelling, in M
+      oligomeric_state: 1 # Oligomeric state of the protein during H/D labelling
+  
+  folding_secb:  # Short human-readable identifier for this protein HDX state
+    peptides:  # Dictionary of peptides defined for this HDX state (typically experiment, FD_control, ND_control)
+      experiment:
+        data_file: MBPsmFRET_Y283D  # Reference to data files defined above
+        state: 15 min fold with SecB  # which protein state to select from data file table
+        exposure: # Exposure value(s) to select from data file table
+          values:
+            - 30.000002
+          unit: min
+      FD_control:
+        data_file: MBPsmFRET_Y283D
+        state: Native
+        exposure:
+          value: 45.000004
+          unit: min
+      ND_control:
+        data_file: MBPsmFRET_Y283D
+        state: FD
+        exposure:
+          value: 5.0000
+          unit: min
+    metadata:
+      temperature:  # Temperature of the exchange buffer and unit
+        value: 20.
+        unit: Celsius
+      sequence: MKIEEGKLVIWINGDKGYNGLAEVGKKFEKDTGIKVCVEHPDKLEEKFPQVAATGDGPDIIFWAHDRFGGYAQSGLLAEITPDKAFQDKLYPFTWDAVRYNGKLIAYPIAVEALSLIYNKDLLPNPPKTWEEIPALDKELKAKGKSALMFNLQEPYFTWPLIAADGGYAFKYENGKYDIKDVGVDNAGAKAGLTFLVDLIKNKHMNADTDYSIAEAAFNKGETAMTINGPWAWSNIDTSKVNYGVTVLPTFKGQPSKPFVGVLSAGINAASPNKELAKEFLENDLLTDEGLEAVNKDKPLGAVALKSYEEELAKDPRIAATMENAQKGEIMPNIPQMSAFWYAVRTAVINAACGRQTVDEALKDAQTRITKKLAAALEHHHHHH
+      n_term: 1  # Residue number of the N terminal residue (can be negative)
+      c_term: 384 # Residue number of the C terminal residue
+      concentration: NaN # Concentration of the protein during H/D labelling, in M
+      oligomeric_state: 1 # Oligomeric state of the protein during H/D labelling
+
+  folding_then_secb:  # Short human-readable identifier for this protein HDX state
+    peptides:  # Dictionary of peptides defined for this HDX state (typically experiment, FD_control, ND_control)
+      experiment:
+        data_file: MBPsmFRET_Y283D  # Reference to data files defined above
+        state: 15min fold then SecB  # which protein state to select from data file table
+        exposure: # Exposure value(s) to select from data file table
+          values:
+            - 20.000000
+          unit: min
+      FD_control:
+        data_file: MBPsmFRET_Y283D
+        state: Native
+        exposure:
+          value: 45.000004
+          unit: min
+      ND_control:
+        data_file: MBPsmFRET_Y283D
+        state: FD
+        exposure:
+          value: 5.0000
+          unit: min
+    metadata:
+      temperature:  # Temperature of the exchange buffer and unit
+        value: 20.
+        unit: Celsius
+      sequence: MKIEEGKLVIWINGDKGYNGLAEVGKKFEKDTGIKVCVEHPDKLEEKFPQVAATGDGPDIIFWAHDRFGGYAQSGLLAEITPDKAFQDKLYPFTWDAVRYNGKLIAYPIAVEALSLIYNKDLLPNPPKTWEEIPALDKELKAKGKSALMFNLQEPYFTWPLIAADGGYAFKYENGKYDIKDVGVDNAGAKAGLTFLVDLIKNKHMNADTDYSIAEAAFNKGETAMTINGPWAWSNIDTSKVNYGVTVLPTFKGQPSKPFVGVLSAGINAASPNKELAKEFLENDLLTDEGLEAVNKDKPLGAVALKSYEEELAKDPRIAATMENAQKGEIMPNIPQMSAFWYAVRTAVINAACGRQTVDEALKDAQTRITKKLAAALEHHHHHH
+      n_term: 1  # Residue number of the N terminal residue (can be negative)
+      c_term: 384 # Residue number of the C terminal residue
+      concentration: NaN # Concentration of the protein during H/D labelling, in M
+      oligomeric_state: 1 # Oligomeric state of the protein during H/D labelling
+
+
+
+
