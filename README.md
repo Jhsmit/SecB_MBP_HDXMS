@@ -1,6 +1,7 @@
 # How SecB maintains clients in a translocation competent state
 
-This repository contains scripts to reproduce HDX-MS results from the paper "How SecB maintains clients in a translocation competent state"
+This repository contains scripts to reproduce HDX-MS results from the paper "[How SecB maintains clients in a translocation competent state](https://doi.org/10.1038/s42003-025-08821-2)"
+
 
 Datasets are published in hdxms-datasets v0.1.5 (legacy) format in the `data` directory. 
 
